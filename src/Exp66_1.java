@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Exp66_1 {
 	public static void main(String[] args) {
@@ -35,5 +36,22 @@ public class Exp66_1 {
 		System.out.println("必要な材料は" + recipe.size() + "種類です");
 		
 		System.out.println("2つ目の材料:" + recipe.get(1));
+	
+		recipe.add("caramel");
+		System.out.println(recipe);
+		
+		Collections.sort(recipe);
+		System.out.println(recipe);
+		
+		Collections.sort(recipe,Collections.reverseOrder());
+		System.out.println(recipe);
+		
+		for(String s:recipe) {
+			System.out.print(s + " ");
+		}
+		System.out.println();
+		for(int i = 0; i < recipe.size(); i++) {
+			System.out.println((i + 1) + "番目の材料:" + recipe.get(i));
+		}
 	}
 }
